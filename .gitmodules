@@ -1,3 +1,6 @@
 [submodule "bundle/The-Nerd-tree"]
 	path = bundle/The-Nerd-tree
 	url = https://github.com/vim-scripts/The-NERD-tree.git
+[submodule "bundle/vim-mac-classic-theme"]
+	path = bundle/vim-mac-classic-theme
+	url = https://github.com/nelstrom/vim-mac-classic-theme.git

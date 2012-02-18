@@ -45,50 +45,75 @@ function! ReportFileNameForDate( date )
         return simplify( filename )
 endfunction
 
-" ReadLogEntriesFromFile( filename )
-function! ReadLogEntriesFromFile( filename )
-        let report = []
+" ReadEntriesMatching( pattern )
+function! ReadEntriesMatching( filename, pattern )
+        let entries = []
         if filereadable( a:filename )
                 for line in readfile( a:filename )
-                        if line =~ '^\* '
-                                call add( report, line )
+                        if line =~ a:pattern
+                                call add( entries, line )
                         endif
                 endfor
         endif
-        return report
+        return entries
+endfunction
+
+" ReadLogEntriesFromFile( filename )
+function! ReadLogEntriesFromFile( filename )
+        return ReadEntriesMatching( a:filename, '^\* ' )
+endfunction
+
+" ReadToDoEntriesFromFile( filename )
+function! ReadToDoEntriesFromFile( filename )
+        return ReadEntriesMatching( a:filename, '\(TODO\)' )
 endfunction
 
 " GetLogEntriesFrom( days_ago )
-function! GetLogEntriesForDate( date )
+function! GetLogEntriesFrom( days_ago )
         if ! a:days_ago
                 let a:days_ago = 0
         endif
-        return ReadLogEntriesFromFile( ReportFileNameForDate( GetDateAsDictionary( days_ago ) ) )
+        return ReadLogEntriesFromFile( ReportFileNameForDate( GetDateAsDictionary( a:days_ago ) ) )
 endfunction
 
-" ComposeStatusReport() builds a status report 
-function! ComposeStatusReport ()
+" GetToDoEntriesFrom( days_ago )
+function! GetToDoEntriesFrom( days_ago )
+        return ReadToDoEntriesFromFile( ReportFileNameForDate( GetDateAsDictionary( a:days_ago ? a:days_ago : 0 ) ) ) 
+endfunction
 
-        let l:report = [ 'PPP Week '.system( '/bin/date +"%W"' ), '', 'Progress' ]
+" PPPHeader()
+function! PPPHeader()
+        return strftime( 'PPP Week %W' )
+endfunction
 
-        let l:days = [ 7, 6, 5, 4, 3, 2, 1 ]
-        for l:day in l:days 
-                let l:date = split( system( printf( '/bin/date -v-%sd +"%%Y %%m %%d"', day ) ) )
-                let l:report_file = simplify( printf( '%s/%04d/%02d/%04d%02d%02d.report', s:worklog_dir, l:date[0], l:date[1], l:date[0], l:date[1], l:date[2] ) )
-                if filereadable( l:report_file )
-                        for line in readfile( l:report_file )
-                                if line =~ '^\* '
-                                        call add( l:report, line )
-                                endif
-                        endfor
-                endif
+function! GetPPPLogEntries()
+        let entries = []
+        for day in [ 7, 6, 5, 4, 3, 2, 1 ]
+              call extend( entries, GetLogEntriesFrom( day ) )  
         endfor
+        return entries
+endfunction
 
-        " Report Additional Headers
-        call add( l:report, '' )
-        call add( l:report, 'Problems' )
-        call add( l:report, '' )
-        call add( l:report, 'Plans' )
-        call append( 0, l:report )
+" GetPPPToDoItems()
+function! GetPPPToDoItems()
+        let entries = []
+        for day in [ 7, 6, 5, 4, 3, 2, 1, 0, -1, -2, -3 ]
+                call extend( entries, GetToDoEntriesFrom( day ) )
+        endfor
+        return entries
+endfunction
 
+" PPP()
+function! PPP()
+        let report = []
+        call add( report, PPPHeader() )
+        call add( report, '' )
+        call add( report, 'Progress' )
+        call extend( report, GetPPPLogEntries() )
+        call add( report, '' )
+        call add( report, 'Problems' )
+        call add( report, '' )
+        call add( report, 'Plans' )
+        call extend( report, GetPPPToDoItems() )
+        return report
 endfunction

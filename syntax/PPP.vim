@@ -18,7 +18,7 @@ highlight PPP_server gui=bold,underline
 syntax match PPP_header 'PPP Week \([01234][0-9]\|5[012]\)\|^Progress\|^Problems\|^Plans'
 syntax match PPP_asterisk '^\*'
 syntax match PPP_manager_tag '\[\(Milton\|Joseph\|David\|Garry\|Dave\|Jing\|ALL\)\]'
-syntax match PPP_platform_tag '\[\(AM\|AU\|EA\|GT\|KI\|KJ\|MP\|NOC\|PO\|DW\|CORE\)\]'
+syntax match PPP_platform_tag '\[\(AM\|AU\|CA\|EA\|EK\|GT\|KI\|KJ\|MP\|NOC\|PO\|DW\|CORE\)\]'
 syntax match PPP_ticket_id '([A-Z]\+-[0-9]\+)'
 syntax match PPP_todo_item '(TODO)'
 syntax match PPP_url 'https\{0,1\}:\/\/[A-Za-z0-9_\.\/\~\-\+]\+'

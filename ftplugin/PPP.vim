@@ -6,10 +6,10 @@
 " Boilerplate
 " Only do this when not done yet for this buffer
 " **************************************************
-" if exists("b:did_PPP_plugin")
-"   finish
-" endif
-" let b:did_PPP_plugin = 1
+"if exists("b:did_PPP_plugin") || &cp
+	"finish
+"endif
+"let b:did_PPP_plugin = 1
 
 " **************************************************
 " Configuration Options
@@ -160,10 +160,7 @@ endfunction
 " Build a PPP Report on a new buffer
 " **************************************************
 function! BuildPPPReport()
-	let filename = PPPFileNameForDate( GetDateAsDictionary(0) )
-	tabnew
 	call append( 0, PPP() )
-	write! filename
 endfunction
 
 " EOF

@@ -10,9 +10,6 @@
 setlocal spell
 setlocal spelllang=en_gb
 
-" Date and Time utility functions
-source ~/.vim/plugin/DateFunctions.vim
-
 function! GetStatusReportHeader ( cityString, countryString )
 	let l:date = GetDateAsDictionary( 0 )
 	let l:headerTemplate = 'DBA Activity Report %04d-%02d-%02d (%s, %s)'

@@ -32,8 +32,6 @@ if !exists("no_plugin_maps") && !exists("no_mail_maps")
         map <buffer> <silent> <LocalLeader>P :call BuildPPPReport()<CR>
 endif
 
-source ~/.vim/plugin/DateFunctions.vim
-
 " **************************************************
 " File Reading Functions
 " **************************************************

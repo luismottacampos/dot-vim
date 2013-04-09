@@ -10,3 +10,6 @@
 [submodule "bundle/puppet-syntax-vim"]
 	path = bundle/puppet-syntax-vim
 	url = https://github.com/puppetlabs/puppet-syntax-vim.git
+[submodule "bundle/work-journal-vim-extension"]
+	path = bundle/work-journal-vim-extension
+	url = git@github.scm.corp.ebay.com:lucampos/work-journal-vim-extension.git

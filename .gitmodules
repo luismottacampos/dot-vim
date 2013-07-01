@@ -13,3 +13,6 @@
 [submodule "bundle/work-journal-vim-extension"]
 	path = bundle/work-journal-vim-extension
 	url = git@github.scm.corp.ebay.com:lucampos/work-journal-vim-extension.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git

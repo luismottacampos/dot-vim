@@ -1,15 +1,9 @@
-[submodule "bundle/The-Nerd-tree"]
-	path = bundle/The-Nerd-tree
-	url = https://github.com/vim-scripts/The-NERD-tree.git
 [submodule "bundle/vim-mac-classic-theme"]
 	path = bundle/vim-mac-classic-theme
 	url = https://github.com/nelstrom/vim-mac-classic-theme.git
 [submodule "bundle/pyflakes-vim"]
 	path = bundle/pyflakes-vim
 	url = https://github.com/kevinw/pyflakes-vim.git
-[submodule "bundle/puppet-syntax-vim"]
-	path = bundle/puppet-syntax-vim
-	url = https://github.com/puppetlabs/puppet-syntax-vim.git
 [submodule "bundle/work-journal-vim-extension"]
 	path = bundle/work-journal-vim-extension
 	url = git@github.scm.corp.ebay.com:lucampos/work-journal-vim-extension.git

@@ -26,6 +26,12 @@ endif
 set ignorecase
 set smartcase
 
+" ctags-exhuberant stuff
+set tags+=~/src/tags
+" update tagfile
+map <Localleader>T :!find $HOME/src -name "*.pp" \| ctags -f ~/src/tags --format=2 --excmd=pattern --fields=nks -L - <CR>
+autocmd FileType puppet set iskeyword=-,:,@,_
+
 " Opens Today's Status Report
 function! CreateOrOpenCurrentECGStatusReport()
     let l:dirname = '/Users/lucampos/Documents/Worklog/' . strftime( '%Y/%m/', localtime() )

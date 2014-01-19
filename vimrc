@@ -1,7 +1,22 @@
 " Pathogen
-source /Users/lucampos/.vim/autoload/pathogen.vim
-call pathogen#infect()
+" source /Users/lucampos/.vim/autoload/pathogen.vim
+" call pathogen#infect()
+set nocompatible
+filetype off
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" The bundles you install will be listed here
+filetype plugin indent on
+
+
+
+" ########################
 " File type related stuff
 syntax on
 filetype plugin indent on

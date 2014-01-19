@@ -1,24 +1,12 @@
 " Pathogen
-" source /Users/lucampos/.vim/autoload/pathogen.vim
-" call pathogen#infect()
-set nocompatible
 filetype off
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+call pathogen#helptags()
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
-
-" The bundles you install will be listed here
-filetype plugin indent on
-
-
-
-" ########################
 " File type related stuff
 syntax on
+filetype on
 filetype plugin indent on
 set ruler expandtab tabstop=4 softtabstop=4
 
@@ -71,3 +59,5 @@ function! Perltidy()
 endfunction
 map <Localleader>t :call Perltidy()<Cr>
 
+" python-mode
+let g:pymode = 1

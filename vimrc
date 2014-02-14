@@ -17,6 +17,9 @@ let localleader=","
 let mapleader=","
 let maplocalleader=','
 
+" PERL5LIB environment variable
+let $PERL5LIB=$HOME.'/perl5/lib/perl5'
+
 " Look and feel
 set guifont=Monaco:h14
 if has("gui_running")
@@ -58,6 +61,3 @@ function! Perltidy()
     execute ":" . current_line
 endfunction
 map <Localleader>t :call Perltidy()<Cr>
-
-" python-mode
-let g:pymode = 1

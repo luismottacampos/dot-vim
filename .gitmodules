@@ -6,10 +6,10 @@
 	url = https://github.com/kevinw/pyflakes-vim.git
 [submodule "bundle/work-journal-vim-extension"]
 	path = bundle/work-journal-vim-extension
-	url = git@github.scm.corp.ebay.com:lucampos/work-journal-vim-extension.git
+	url = ssh://lmc@dust.bitbistro.com/~lmc/repositories/work-journal-vim-extension.git
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
@@ -19,3 +19,15 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/python-mode"]
+	path = bundle/python-mode
+	url = https://github.com/klen/python-mode.git
+[submodule "bundle/rope-vim"]
+	path = bundle/rope-vim
+	url = https://github.com/klen/rope-vim.git
+[submodule "bundle/vim-pathogen"]
+	path = bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen

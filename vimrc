@@ -33,10 +33,12 @@ set ignorecase
 set smartcase
 
 " ctags-exhuberant stuff
-set tags+=~/src/tags
+set tags+=tags
 " update tagfile
-map <Localleader>T :!find $HOME/src -name "*.pp" \| ctags -f ~/src/tags --format=2 --excmd=pattern --fields=nks -L - <CR>
-autocmd FileType puppet set iskeyword=-,:,@,_
+" map <Localleader>T :!find $HOME/src -name "*.pp" \| ctags -f ~/src/tags --format=2 --excmd=pattern --fields=nks -L - <CR>
+" autocmd FileType puppet set iskeyword=-,:,@,_
+autocmd FileType puppet set iskeyword=-,:,@,48-57,_,192-255
+
 
 " Opens Today's Status Report
 function! CreateOrOpenCurrentECGStatusReport()

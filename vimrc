@@ -8,6 +8,7 @@ call pathogen#helptags()
 syntax on
 filetype on
 filetype plugin indent on
+set foldmethod=manual
 set ruler expandtab tabstop=4 softtabstop=4
 
 " Local Leader
@@ -18,7 +19,7 @@ let mapleader=","
 let maplocalleader=','
 
 " Look and feel
-set guifont=Monaco:h14
+set guifont=Monaco:h12
 if has("gui_running")
     colorscheme mac_classic
 else

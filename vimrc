@@ -54,8 +54,13 @@ autocmd Filetype ruby       setlocal ts=2 sw=2       expandtab
 autocmd Filetype puppet     setlocal ts=2 sw=2       expandtab
 autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
 
-set g:SuperTabDefaultCompletionType = "context"
-set g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+" SuperTab + Omnicompletion = win
+let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabContextDefaultCompletionType = '<C-x><C-o>'
+" call SuperTabContextDefaultCompletionType(<C-x><C-o>')
+let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
+let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
 
 " Opens Today's Status Report
 function! CreateOrOpenCurrentECGStatusReport()

@@ -54,6 +54,9 @@ autocmd Filetype ruby       setlocal ts=2 sw=2       expandtab
 autocmd Filetype puppet     setlocal ts=2 sw=2       expandtab
 autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
 
+set g:SuperTabDefaultCompletionType = "context"
+set g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
 " Opens Today's Status Report
 function! CreateOrOpenCurrentECGStatusReport()
     let l:dirname = '/Users/lcampos/Documents/Worklog/' . strftime( '%Y/%m/', localtime() )

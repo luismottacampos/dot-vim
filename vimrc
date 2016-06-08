@@ -64,7 +64,7 @@ let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc
 
 " Opens Today's Status Report
 function! CreateOrOpenCurrentECGStatusReport()
-    let l:dirname = '/Users/lcampos/Documents/Worklog/' . strftime( '%Y/%m/', localtime() )
+    let l:dirname = '/Users/luis/Documents/Worklog/' . strftime( '%Y/%m/', localtime() )
     let l:filename = l:dirname . strftime( '%Y%m%d.report', localtime() )
     
     if exists("*mkdir")

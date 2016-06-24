@@ -71,3 +71,7 @@ let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
 let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
 
+" Racer Completion experiment
+set hidden
+let g:racer_cmd = "/Users/luis/.cargo/bin/racer"
+" let $RUST_SRC_PATH="<path-to-rust-srcdir>/src/"

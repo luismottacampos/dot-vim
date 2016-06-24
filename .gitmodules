@@ -70,3 +70,9 @@
 [submodule "bundle/vim-chef"]
 	path = bundle/vim-chef
 	url = https://github.com/t9md/vim-chef.git
+[submodule "vim-racer"]
+	path = bundle/vim-racer
+	url = https://github.com/racer-rust/vim-racer.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git

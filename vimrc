@@ -37,12 +37,22 @@ let mapleader=","
 let maplocalleader=','
 
 " Look and feel
-set guifont=Monaco:h12
+set guifont=Monaco:h14
 if has("gui_running")
     colorscheme mac_classic
 else
     colorscheme desert
 endif
+
+" Syntastic extensions
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Search options
 set ignorecase
@@ -50,7 +60,6 @@ set smartcase
 
 " Set appropriated tab and space options per filetype.
 autocmd Filetype shell      setlocal ts=4 sw=4       expandtab
-autocmd Filetype ruby       setlocal ts=2 sw=2       expandtab
 autocmd Filetype puppet     setlocal ts=2 sw=2       expandtab
 autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
 
@@ -61,19 +70,4 @@ let g:SuperTabContextDefaultCompletionType = '<C-x><C-o>'
 let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
 let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
-
-" Opens Today's Status Report
-function! CreateOrOpenCurrentECGStatusReport()
-    let l:dirname = '/Users/luis/Documents/Worklog/' . strftime( '%Y/%m/', localtime() )
-    let l:filename = l:dirname . strftime( '%Y%m%d.report', localtime() )
-    
-    if exists("*mkdir")
-        if ! isdirectory( l:dirname )
-            call mkdir( l:dirname, 'p' )
-        endif
-    endif
-    execute 'edit! ' . l:filename
-    call AddAmsterdamStatusReportHeader()
-endfunction
-map <Localleader>S :call CreateOrOpenCurrentECGStatusReport()<CR>
 

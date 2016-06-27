@@ -32,8 +32,8 @@ set modeline modelines=3
 " Local Leader
 let apleader= ','
 let leader=','
-let localleader=","
-let mapleader=","
+let localleader=','
+let mapleader=','
 let maplocalleader=','
 
 " Look and feel

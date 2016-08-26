@@ -75,3 +75,6 @@ let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc
 set hidden
 let g:racer_cmd = "/Users/luis/.cargo/bin/racer"
 " let $RUST_SRC_PATH="<path-to-rust-srcdir>/src/"
+
+" Global variable definitions for my work journal.
+let g:work_journal_work_dir = '/Users/luis/Documents/Worklog'

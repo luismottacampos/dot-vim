@@ -67,3 +67,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/bundle/work-journal-vim"]
+	path = bundle/bundle/work-journal-vim
+	url = git@github.com:luismottacampos/work-journal-vim.git

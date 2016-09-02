@@ -78,3 +78,4 @@ let g:racer_cmd = "/Users/luis/.cargo/bin/racer"
 
 " Global variable definitions for my work journal.
 let g:work_journal_work_dir = '/Users/luis/Documents/Worklog'
+let g:work_journal_todo_list_link = 'https://pagerduty.atlassian.net/wiki/x/KoCzC'

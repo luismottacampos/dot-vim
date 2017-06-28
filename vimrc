@@ -37,7 +37,7 @@ let mapleader=','
 let maplocalleader=','
 
 " Look and feel
-set guifont=Monaco:h14
+set guifont=Monaco:h12
 if has("gui_running")
     colorscheme mac_classic
 else

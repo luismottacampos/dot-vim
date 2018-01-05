@@ -44,16 +44,6 @@ else
     colorscheme desert
 endif
 
-" Syntastic extensions
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 " Search options
 set ignorecase
 set smartcase
@@ -62,19 +52,6 @@ set smartcase
 autocmd Filetype shell      setlocal ts=4 sw=4       expandtab
 autocmd Filetype puppet     setlocal ts=2 sw=2       expandtab
 autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
-
-" SuperTab + Omnicompletion = win
-let g:SuperTabDefaultCompletionType = 'context'
-let g:SuperTabContextDefaultCompletionType = '<C-x><C-o>'
-" call SuperTabContextDefaultCompletionType(<C-x><C-o>')
-let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
-
-" Racer Completion experiment
-set hidden
-let g:racer_cmd = "/Users/luis/.cargo/bin/racer"
-" let $RUST_SRC_PATH="<path-to-rust-srcdir>/src/"
 
 " Global variable definitions for my work journal.
 let g:work_journal_work_dir = '/Users/luis/Documents/Worklog'

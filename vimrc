@@ -130,3 +130,12 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+
+""" GO LANG
+" Expands the search scope for Go Guru
+autocmd BufRead /Users/luis/go/src/*.go
+      \  let s:tmp = matchlist(expand('%.p'),
+          \ '/Users/luis/go/src/\([^/]\+\)')
+      \| if len(s:tmp) > 1 |  exe 'silent :GoGuruScope ' . s:tmp[1] | endif
+      \| unlet s:tmp

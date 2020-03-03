@@ -25,7 +25,6 @@ set linebreak
 set visualbell
 set t_vb=
 set number
-set diffopt+=iwhite
 set encoding=utf-8
 set modeline modelines=3
 

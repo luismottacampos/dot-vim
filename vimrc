@@ -56,6 +56,17 @@ autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
 let g:work_journal_work_dir = '/Users/luis/Documents/Worklog'
 let g:work_journal_todo_list_link = 'https://pagerduty.atlassian.net/wiki/x/KoCzC'
 
+" Syntastic Configuration Variables
+" (https://github.com/vim-syntastic/syntastic)
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 
 "
 " #### NEOCOMPLETE FOR VIM (https://github.com/Shougo/neocomplete.vim)

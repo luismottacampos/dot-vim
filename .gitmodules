@@ -1,66 +1,9 @@
 [submodule "bundle/vim-mac-classic-theme"]
 	path = bundle/vim-mac-classic-theme
 	url = https://github.com/nelstrom/vim-mac-classic-theme.git
-[submodule "bundle/pyflakes-vim"]
-	path = bundle/pyflakes-vim
-	url = https://github.com/kevinw/pyflakes-vim.git
-[submodule "bundle/work-journal-vim-extension"]
-	path = bundle/work-journal-vim-extension
-	url = ssh://lmc@dust.bitbistro.com/~lmc/repositories/work-journal-vim-extension.git
-[submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/tabular"]
-	path = bundle/tabular
-	url = https://github.com/godlygeek/tabular.git
-[submodule "bundle/vim-puppet"]
-	path = bundle/vim-puppet
-	url = https://github.com/rodjek/vim-puppet.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/python-mode"]
-	path = bundle/python-mode
-	url = https://github.com/klen/python-mode.git
-[submodule "bundle/rope-vim"]
-	path = bundle/rope-vim
-	url = https://github.com/klen/rope-vim.git
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
-[submodule "bundle/pig-latin"]
-	path = bundle/pig-latin
-	url = https://github.com/motus/pig.vim.git
-[submodule "bundle/vim-rake"]
-	path = bundle/vim-rake
-	url = git://github.com/tpope/vim-rake.git
-[submodule "bundle/vim-projectionist"]
-	path = bundle/vim-projectionist
-	url = git://github.com/tpope/vim-projectionist.git
-[submodule "bundle/vim-cucumber"]
-	path = bundle/vim-cucumber
-	url = git://github.com/tpope/vim-cucumber.git
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
-[submodule "vim-bundler"]
-	path = vim-bundler
-	url = git://github.com/tpope/vim-bundler.git
-[submodule "bundle/vim-bundler"]
-	path = bundle/vim-bundler
-	url = git://github.com/tpope/vim-bundler.git
-[submodule "bundle/vim-rails"]
-	path = bundle/vim-rails
-	url = git://github.com/tpope/vim-rails.git
-[submodule "bundle/vim-ruby-refactoring"]
-	path = bundle/vim-ruby-refactoring
-	url = https://github.com/ecomba/vim-ruby-refactoring.git
-[submodule "bundle/vim-chef"]
-	path = bundle/vim-chef
-	url = https://github.com/t9md/vim-chef.git
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git

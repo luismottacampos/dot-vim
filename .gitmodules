@@ -43,3 +43,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "bundle/NrrwRgn"]
+	path = bundle/NrrwRgn
+	url = https://github.com/chrisbra/NrrwRgn.git

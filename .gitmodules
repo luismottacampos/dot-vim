@@ -52,3 +52,6 @@
 [submodule "bundle/vim-SyntaxRange"]
 	path = bundle/vim-SyntaxRange
 	url = https://github.com/inkarkat/vim-SyntaxRange.git
+[submodule "bundle/vim-ingo-library"]
+	path = bundle/vim-ingo-library
+	url = https://github.com/inkarkat/vim-ingo-library.git

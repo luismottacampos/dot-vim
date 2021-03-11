@@ -8,6 +8,7 @@ call pathogen#helptags()
 syntax on
 filetype on
 filetype plugin indent on
+set bg=dark
 set foldmethod=manual
 set ruler
 set smarttab

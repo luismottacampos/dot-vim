@@ -41,5 +41,5 @@ set guifont=Monaco:h12
 if has("gui_running")
     colorscheme mac_classic
 else
-    colorscheme desert
+    colorscheme default
 endif
